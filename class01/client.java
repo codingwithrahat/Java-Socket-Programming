@@ -16,8 +16,8 @@ public class client {
             // After use, it's good practice to close the socket
             // soc.close();
 
-        } catch (IOException e) {
-            // If an input/output exception occurs (e.g., server not running), print the error
+        } catch (Exception e) {
+            // If an exception occurs (e.g., server not running), print the error
             System.out.println(e);
         }
 
