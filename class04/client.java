@@ -5,6 +5,11 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 public class client {
+
+    public static String format(String s){
+        return ("[" + s.length() + ":" + s + "]");
+    }
+
     public static void main(String[] args){
 
         try{
@@ -13,15 +18,26 @@ public class client {
             Socket soc = new Socket("localhost", 5000);
 
             BufferedReader userInput = new BufferedReader(new InputStreamReader(System.in));
-            System.out.println("Enter Mssg : ");
-            String str = userInput.readLine();
 
             PrintWriter out = new PrintWriter(soc.getOutputStream(), true);
-            out.println(str);
 
             BufferedReader in = new BufferedReader(new InputStreamReader(soc.getInputStream()));
-            String str2 = in.readLine();
-            System.out.println(str2);
+
+            String str;
+
+            while(true){
+
+                if(str.equals("bye")) break;
+                
+                System.out.println("Enter Mssg : ");
+                str = userInput.readLine();
+
+                out.println(format(str));
+
+                String str2 = in.readLine();
+                System.out.println(str2);
+
+            }
 
         } catch (Exception e) {
             System.out.println(e);
