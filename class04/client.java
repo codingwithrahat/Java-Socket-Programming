@@ -26,13 +26,13 @@ public class client {
             String str;
 
             while(true){
-
-                if(str.equals("bye")) break;
                 
                 System.out.println("Enter Mssg : ");
                 str = userInput.readLine();
 
                 out.println(format(str));
+
+                if(str.equals("bye")) break;
 
                 String str2 = in.readLine();
                 System.out.println(str2);
