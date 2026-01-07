@@ -25,7 +25,7 @@ public class server {
 
                 str = in.readLine();
 
-                if(str.equals("bye")) break;
+                if(str == null ||str.equalsIgnoreCase("bye")) break;
 
                 char[] s = str.toCharArray();
 
