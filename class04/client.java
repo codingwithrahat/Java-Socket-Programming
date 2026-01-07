@@ -39,6 +39,10 @@ public class client {
 
             }
 
+            System.out.println("Connection Lost");
+
+            soc.close();
+
         } catch (Exception e) {
             System.out.println(e);
         }
