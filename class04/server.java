@@ -69,11 +69,17 @@ public class server {
                 }
 
                 if(flag){
+                    System.out.println("Client syas : " + str);
                     out.println("Mssg Accepted : " + str);
                 }else{
                     out.println("Invalid Format : " + str);
                 }
             }
+            
+            System.out.println("Connection Off");
+
+            ss.close();
+            soc.close();
 
 
         } catch (Exception e){
