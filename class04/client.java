@@ -32,7 +32,7 @@ public class client {
 
                 out.println(format(str));
 
-                if(str.equals("bye")) break;
+                if(str.equalsIgnoreCase("bye")) break;
 
                 String str2 = in.readLine();
                 System.out.println(str2);
