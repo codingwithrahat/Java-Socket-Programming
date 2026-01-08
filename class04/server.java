@@ -72,7 +72,8 @@ public class server {
                     System.out.println("Client syas : " + str);
                     out.println("Mssg Accepted : " + str);
                 }else{
-                    out.println("Invalid Format : " + str);
+                    out.println("Error");
+                    System.out.println("Invalid Format");
                 }
             }
             
