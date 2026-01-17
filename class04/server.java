@@ -4,6 +4,7 @@ import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+
 public class server {
     public static void main(String[] args){
 
@@ -25,7 +26,9 @@ public class server {
 
                 str = in.readLine();
 
-                if(str == null ||str.equalsIgnoreCase("bye")) break;
+                if (str == null || str.equalsIgnoreCase("bye")) {
+                    break;
+                }
 
                 char[] s = str.toCharArray();
 
@@ -69,15 +72,17 @@ public class server {
                 }
 
                 if(flag){
-                    System.out.println("Client syas : " + str);
+                    System.out.println("Client Syas : " + str);
                     out.println("Mssg Accepted : " + str);
                 }else{
                     out.println("Error");
                     System.out.println("Invalid Format");
                 }
+
+
             }
-            
-            System.out.println("Connection Off");
+
+            System.out.println("Connection Close");
 
             ss.close();
             soc.close();
