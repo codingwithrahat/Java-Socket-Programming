@@ -26,20 +26,21 @@ public class client {
             String str;
 
             while(true){
-                
-                System.out.println("Enter Mssg : ");
+
+                System.out.print("Enter Mssg : ");
                 str = userInput.readLine();
 
                 out.println(format(str));
 
-                if(str.equalsIgnoreCase("bye")) break;
+                if (str.equalsIgnoreCase("bye")) break;
 
                 String str2 = in.readLine();
                 System.out.println(str2);
 
+
             }
 
-            System.out.println("Connection Lost");
+            System.out.println("Connection Lost.");
 
             soc.close();
 
@@ -49,4 +50,3 @@ public class client {
 
     }
 }
-
