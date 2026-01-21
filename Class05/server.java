@@ -50,10 +50,10 @@ public class server {
                 int rNum = Integer.parseInt(strNum);     //convert string to int
 
 
-                if(rNum >= 80){
+                if(rNum <= 80){
 
-                    // Show the percentage of error
-                    System.out.println("Error : " + (100 - rNum) + "%");
+                    // Show the percentage of correct & error
+                    System.out.println("Correct : " + (rNum) + "%" + " || " + "Error : " + (100 - rNum) + "%");
 
                     cntCorrect++;
 
@@ -109,8 +109,8 @@ public class server {
 
                 }else{
 
-                    // Show the percentage of error
-                    System.out.println("Error : " + (100 - rNum) + "%");
+                    // Show the percentage of correct & error
+                    System.out.println("Correct : " + (rNum) + "%" + " " + "Error : " + (100 - rNum) + "%");
                     cntWrong++;
                     out.println("Error");
                 }
